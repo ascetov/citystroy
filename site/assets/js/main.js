@@ -321,7 +321,14 @@
         return;
       }
 
-      fetch('mail/send.php', { method: 'POST', body: data })
+      var payload = {};
+      data.forEach(function (value, key) { payload[key] = value; });
+
+      fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      })
         .then(function (r) { return r.json().catch(function () { return { ok: false }; }); })
         .then(function (res) {
           btn && btn.classList.remove('is-busy');

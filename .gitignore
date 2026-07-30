@@ -8,6 +8,9 @@ site/mail/log/*.json
 !site/assets/**
 !_build/**
 
+# Зависимости Node.js — Vercel сам ставит их при деплое по package.json
+site/node_modules/
+
 # Служебные файлы Windows и редакторов
 Thumbs.db
 desktop.ini

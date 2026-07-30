@@ -1,0 +1,10 @@
+{
+  "name": "citystroy-site",
+  "private": true,
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "nodemailer": "^6.9.14"
+  }
+}
