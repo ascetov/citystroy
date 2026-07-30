@@ -1,0 +1,16 @@
+# Журналы заявок и служебные файлы формы — в репозиторий не попадают
+site/mail/log/*.log
+site/mail/log/*.json
+
+# Скриншоты и референсы из переписки, к сайту отношения не имеют
+*.png
+*.jpg
+!site/assets/**
+!_build/**
+
+# Служебные файлы Windows и редакторов
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

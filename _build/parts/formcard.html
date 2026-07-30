@@ -1,0 +1,41 @@
+      <div class="formcard">
+        <h3>Написать письмо</h3>
+        <p>Заполните форму — мы ответим на указанный e-mail.</p>
+
+        <form class="js-form" novalidate>
+          <div class="form__alert" role="alert"></div>
+
+          <div class="field">
+            <label for="f-name">Имя <span class="req">*</span></label>
+            <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Как к вам обращаться">
+            <div class="field__err"></div>
+          </div>
+
+          <div class="field">
+            <label for="f-phone">Номер телефона</label>
+            <input type="tel" id="f-phone" name="phone" autocomplete="tel" placeholder="+7 (___) ___-__-__">
+            <div class="field__err"></div>
+          </div>
+
+          <div class="field">
+            <label for="f-email">E-mail <span class="req">*</span></label>
+            <input type="email" id="f-email" name="email" autocomplete="email" placeholder="name@example.ru">
+            <div class="field__err"></div>
+          </div>
+
+          <div class="field">
+            <label for="f-message">Сообщение <span class="req">*</span></label>
+            <textarea id="f-message" name="message" placeholder="Опишите задачу: объект, объём работ, сроки — или просто задайте вопрос"></textarea>
+            <div class="field__err"></div>
+          </div>
+
+          <div class="hp"><label>Не заполняйте это поле<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+
+          <button class="btn btn--primary btn--block js-submit" type="submit">
+            <span class="spinner" aria-hidden="true"></span>
+            Отправить письмо
+            <svg class="btn__arrow" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+          <p class="form__note">Нажимая кнопку, вы соглашаетесь на обработку персональных данных для ответа на ваше обращение.</p>
+        </form>
+      </div>

@@ -1,0 +1,27 @@
+# Закрываем доступ к настройкам почты из браузера.
+# Файл send.php остаётся доступным — он принимает заявки с формы.
+<Files "config.php">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</Files>
+
+# Журналы заявок и ошибок наружу не отдаём.
+<FilesMatch "\.(log|json)$">
+  <IfModule mod_authz_core.c>
+    Require all denied
+  </IfModule>
+  <IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+  </IfModule>
+</FilesMatch>
+
+# Исходники библиотеки PHPMailer напрямую не запускаются.
+RedirectMatch 404 ^/mail/PHPMailer/.*$
+
+Options -Indexes
